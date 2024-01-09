@@ -4,6 +4,8 @@ intro_menu = """
 **    Please see our menu below.    **
 **
 ** To quit at any time, type "quit" **
+** To order type the item <name>    **
+** Type "summary" to view the order **
 **************************************
 
 Appetizers
@@ -97,6 +99,10 @@ def handle_order_input(order_input):
         return order_response
       
   return f'\n ** Not Found on the Menu; Check Spelling ** \n ** {get_order_summary()} ** \n'
+
+###############
+## start app ##
+###############
 
 print(intro_menu)
 
