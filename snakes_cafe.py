@@ -60,12 +60,29 @@ order = {
   }
 }
 
+def get_order_summary():
+
+  summary_response = 'Summary:'
+
+  for course in order:
+    for item in order[course]:
+
+      quantity = order[course][item]
+      if quantity > 0:
+        summary_response += f' {item}: {quantity},'
+
+  return summary_response
+
 def handle_order_input(order_input):
 
   if order_input == 'Quit':
 
     return 'quit'
   
+  elif order_input == 'Summary':
+
+    return f'\n ** {get_order_summary()} ** \n'
+
   else:
 
     for course in order:
@@ -75,11 +92,11 @@ def handle_order_input(order_input):
         quantity = order[course][order_input]
 
         order_statement = f'{quantity} {"order" if quantity == 1 else "orders"} of {order_input} {"has" if quantity == 1 else "have"} been added to your meal'
-        response = f'\n ** {order_statement} ** \n'
+        order_response = f'\n ** {order_statement} ** \n ** {get_order_summary()} ** \n'
         
-        return response
+        return order_response
       
-  return '\n ** Not Found on the Menu; Check Spelling ** \n'
+  return f'\n ** Not Found on the Menu; Check Spelling ** \n ** {get_order_summary()} ** \n'
 
 print(intro_menu)
 
