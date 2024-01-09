@@ -1,0 +1,15 @@
+# LAB - Class 01
+
+## Project: Snakes Cafe
+
+### Author: [Caleb Hemphill](https://github.com/kaylubh)
+
+### Setup
+
+#### Requirements
+
+Install Python
+
+#### Run
+
+Run `python snakes_cafe.py` in your terminal
