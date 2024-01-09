@@ -12,4 +12,4 @@ Install Python
 
 #### Run
 
-Run `python snakes_cafe.py` in your terminal
+Run `python3 snakes_cafe.py` in your terminal
